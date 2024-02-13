@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./image/dressrosa.png);
+    background-size: cover;
+}
+
+
+
+.perso{
+    animation: course 1s steps(6) infinite;
+}
+.luffy{
+    height: 20vh;
+    width: 15vh;
+}
+
+@keyframes course{
+    0% {
+        content: url('./image/luffy-course1.png');
+        height: 20vh;
+        width: 15vh;
+    }
+    16.67% {
+        content: url('./image/luffy-course2.png');
+        height: 20vh;
+        width: 15vh;
+    }
+    33.33% { 
+        content: url('./image/luffy-course3.png');
+        height: 20vh;
+        width: 15vh; 
+    }
+    50% { 
+        content: url('./image/luffy-course4.png');
+        height: 20vh;
+        width: 15vh; 
+    }
+    66.67% { 
+        content: url('./image/luffy-course5.png');
+        height: 20vh;
+        width: 15vh; 
+    }
+    83.33% { 
+        content: url('./image/luffy-course6.png'); 
+        height: 20vh;
+        width: 15vh;
+    }
+    100% { 
+        content: url('./image/luffy-course1.png'); 
+        height: 20vh;
+        width: 15vh;
+    }
+}
+
+.saut{
+    animation: saut 1s steps(6);
+}
+
+@keyframes saut{
+    0% {
+        content: url('./image/luffy-saut1.png');
+        height: 20vh;
+        width: 15vh;
+    }
+    16.67% {
+        content: url('./image/luffy-saut2.png');
+        height: 20vh;
+        width: 15vh;
+        bottom: 7%;  
+    }
+    33.33% { 
+        content: url('./image/luffy-saut3.png');
+        height: 20vh;
+        width: 15vh;
+        bottom: 11%;  
+    }
+    50% { 
+        content: url('./image/luffy-saut4.png');
+        height: 20vh;
+        width: 15vh;
+        bottom: 14%;  
+    }
+    66.67% { 
+        content: url('./image/luffy-saut5.png');
+        height: 20vh;
+        width: 15vh;
+        bottom: 11%;  
+    }
+    83.33% { 
+        content: url('./image/luffy-saut6.png'); 
+        height: 20vh;
+        width: 15vh;
+        bottom: 7%; 
+    }
+    100% { 
+        content: url('./image/luffy-saut1.png'); 
+        height: 20vh;
+        width: 15vh;
+    }
+}
+
+.glissade{
+    animation: glissade 1s steps(6);   
+}
+
+@keyframes glissade{
+    0% {
+        content: url('./image/luffy-glissade1.png');
+        height: 20vh;
+        width: 15vh;
+    }
+    16.67% {
+        content: url('./image/luffy-glissade2.png');
+        height: 15vh;
+        width: 20vh;  
+    }
+    33.33% { 
+        content: url('./image/luffy-glissade3.png');
+        height: 15vh;
+        width: 20vh;  
+    }
+    50% { 
+        content: url('./image/luffy-glissade4.png');
+        height: 15vh;
+        width: 20vh;  
+    }
+    66.67% { 
+        content: url('./image/luffy-glissade5.png');
+        height: 20vh;
+        width: 15vh;
+        bottom: 6%;  
+    }
+    83.33% { 
+        content: url('./image/luffy-glissade6.png'); 
+        height: 20vh;
+        width: 15vh; 
+    }
+    100% { 
+        content: url('./image/luffy-glissade1.png'); 
+        height: 20vh;
+        width: 15vh;
+    }
+}
+
+
+.obstacle1{
+    animation: obstacle1 15s linear infinite;
+}
+.obstacle3{
+    animation: obstacle3 15s linear infinite;
+}
+.obstacle4{
+    animation: obstacle4 15s linear infinite;
+}
+.obstacle6{
+    animation: obstacle6 15s linear infinite;
+}
+.obstacle9{
+    animation: obstacle9 15s linear infinite;
+}
+
+.obstacle-1{
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    height: 12vh;
+    width: 12vh;
+}
+
+.obstacle2{
+    animation: obstacle2 15s linear infinite;
+}
+.obstacle5{
+    animation: obstacle5 15s linear infinite;
+}
+.obstacle7{
+    animation: obstacle7 15s linear infinite;
+}
+.obstacle8{
+    animation: obstacle8 15s linear infinite;
+}
+.obstacle10{
+    animation: obstacle10 18s linear infinite;
+}
+
+.obstacle-2{
+    position: absolute;
+    bottom: 12%;
+    right: 0%;
+    height: 10vh;
+    width: 10vh;
+}
+
+@keyframes obstacle1{
+    0%{ 
+        right:calc(0 - 8vh);
+    } 
+    20%{
+        right: calc(100% + 8vh);
+    }
+    20.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle2{
+    0%{
+        visibility: hidden;
+    }
+    9.99%{
+        visibility: hidden;
+    }
+    10%{
+        visibility: visible; 
+        right: 0;
+    } 
+    30%{
+        right: calc(100% + 8vh);
+    }
+    30.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle3{
+    0%{
+        visibility: hidden;
+    }
+    19.99%{
+        visibility: hidden;
+    }
+    20%{
+        visibility: visible; 
+        right: 0;
+    } 
+    40%{
+        right: calc(100% + 8vh);
+    }
+    40.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle4{
+    0%{
+        visibility: hidden;
+    }
+    29.99%{
+        visibility: hidden;
+    }
+    30%{
+        visibility: visible; 
+        right: 0;
+    } 
+    50%{
+        right: calc(100% + 8vh);
+    }
+    50.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle5{
+    0%{
+        visibility: hidden;
+    }
+    39.99%{
+        visibility: hidden;
+    }
+    40%{
+        visibility: visible; 
+        right: 0;
+    } 
+    60%{
+        right: calc(100% + 8vh);
+    }
+    60.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle6{
+    0%{
+        visibility: hidden;
+    }
+    49.99%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible; 
+        right: 0;
+    } 
+    70%{
+        right: calc(100% + 8vh);
+    }
+    70.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle7{
+    0%{
+        visibility: hidden;
+    }
+    59.99%{
+        visibility: hidden;
+    }
+    60%{
+        visibility: visible; 
+        right: 0;
+    } 
+    80%{
+        right: calc(100% + 8vh);
+    }
+    80.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle8{
+    0%{
+        visibility: hidden;
+    }
+    69.99%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: visible; 
+        right: 0;
+    } 
+    90%{
+        right: calc(100% + 8vh);
+    }
+    90.01%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes obstacle9{
+    0%{
+        visibility: hidden;
+    }
+    79.99%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: visible; 
+        right: 0;
+    } 
+    100%{
+        right: calc(100% + 8vh);
+    }
+}
+@keyframes obstacle10{
+    0%{
+        visibility: hidden;
+    }
+    74.99%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible; 
+        right: 0;
+    } 
+    91.66%{
+        right: calc(100% + 8vh);
+    }
+    91.67%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
