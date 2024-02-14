@@ -11,6 +11,37 @@ body{
     background-size: cover;
 }
 
+#instructions-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2vh white;
+    background-color: black;
+    padding: 3vh;
+    font-size: 16px;
+    color: green;
+    text-align: center;
+    display: block; 
+}
+#instructions-message p {
+    animation: clignotage 1s infinite; 
+}
+@keyframes clignotage {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+#score{
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 18px;
+}
+
+
 
 
 .perso{
@@ -71,33 +102,33 @@ body{
     }
     16.67% {
         content: url('./image/luffy-saut2.png');
-        height: 20vh;
-        width: 15vh;
-        bottom: 7%;  
+        height: 23vh;
+        width: 17vh;
+        bottom: 13%;  
     }
     33.33% { 
         content: url('./image/luffy-saut3.png');
-        height: 20vh;
-        width: 15vh;
-        bottom: 11%;  
+        height: 23vh;
+        width: 17vh;
+        bottom: 17%;  
     }
     50% { 
         content: url('./image/luffy-saut4.png');
-        height: 20vh;
-        width: 15vh;
-        bottom: 14%;  
+        height: 23vh;
+        width: 17vh;
+        bottom: 20%;  
     }
     66.67% { 
         content: url('./image/luffy-saut5.png');
-        height: 20vh;
-        width: 15vh;
-        bottom: 11%;  
+        height: 23vh;
+        width: 17vh;
+        bottom: 17%;  
     }
     83.33% { 
         content: url('./image/luffy-saut6.png'); 
         height: 20vh;
         width: 15vh;
-        bottom: 7%; 
+        bottom: 13%; 
     }
     100% { 
         content: url('./image/luffy-saut1.png'); 
@@ -118,17 +149,17 @@ body{
     }
     16.67% {
         content: url('./image/luffy-glissade2.png');
-        height: 15vh;
+        height: 8vh;
         width: 20vh;  
     }
     33.33% { 
         content: url('./image/luffy-glissade3.png');
-        height: 15vh;
+        height: 8vh;
         width: 20vh;  
     }
     50% { 
         content: url('./image/luffy-glissade4.png');
-        height: 15vh;
+        height: 8vh;
         width: 20vh;  
     }
     66.67% { 
@@ -148,6 +179,46 @@ body{
         width: 15vh;
     }
 }
+
+.loose-animation{
+    animation: loose 2s;
+}
+
+@keyframes loose{
+    0%{
+        content: url('./image/luffy-lose1.png');
+        height: 20vh;
+        width: 20vh;
+    }
+    15%{
+        content: url('./image/luffy-lose2.png');
+        height: 15vh;
+        width: 20vh;
+    }
+    30%{
+        content: url('./image/luffy-lose3.png');
+        height: 15vh;
+        width: 20vh;
+    }
+    45%{
+        content: url('./image/luffy-lose4.png');
+        height: 13vh;
+        width: 20vh;
+    }
+    60%{
+        content: url('./image/luffy-lose5.png');
+        height: 10vh;
+        width: 20vh;
+    }
+    100%{
+        content: url('./image/luffy-lose5.png');
+        height: 10vh;
+        width: 20vh;
+    }
+}
+
+
+
 
 
 .obstacle1{
@@ -210,6 +281,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle2{
@@ -231,6 +303,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle3{
@@ -252,6 +325,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle4{
@@ -273,6 +347,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle5{
@@ -294,6 +369,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle6{
@@ -315,6 +391,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle7{
@@ -336,6 +413,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle8{
@@ -357,6 +435,7 @@ body{
     }
     100%{
         visibility: hidden;
+        right: calc(100% + 8vh);
     }
 }
 @keyframes obstacle9{
@@ -374,25 +453,19 @@ body{
         right: calc(100% + 8vh);
     }
 }
-@keyframes obstacle10{
-    0%{
-        visibility: hidden;
-    }
-    74.99%{
-        visibility: hidden;
-    }
-    75%{
-        visibility: visible; 
-        right: 0;
-    } 
-    91.66%{
-        right: calc(100% + 8vh);
-    }
-    91.67%{
-        visibility: hidden;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
 
+
+
+#you-loose-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: solid 3vh maroon;
+    background-color: beige;
+    padding: 5vh;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
